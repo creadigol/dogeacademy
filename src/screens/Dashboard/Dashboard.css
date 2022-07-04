@@ -1,0 +1,370 @@
+/* COMMON */
+.common{
+    padding: 110px 0px 0px 0px;
+}
+
+.subsection-main{
+    background-image: url(../../assets/image/main-bg.png);
+    width: 100%;
+    background-repeat: repeat-y;
+    background-size: cover;
+    padding-bottom: 10px;
+}
+
+.title{
+    font-size: 42px;
+    font-weight: 900;
+    text-align: center;
+    padding: 0px 0px 40px 0px;
+    margin-bottom: 0px;
+}
+
+.subtitle{
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    font-size: 16px;
+    text-align: center;
+}
+
+a.buynow, button.buynow{
+    background: linear-gradient(180deg, #FFECB5 -60.99%, #E6C259 70.42%);
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 800;
+    font-size: 16px;
+    text-shadow: 1px 2px #442A14;
+    display: block;
+    max-width: 130px;
+    margin: 0 auto;
+    margin: 0 auto -35px auto;
+    box-shadow: -6px 6px 0px 0px #442a14;
+    letter-spacing: 0.5px;
+}
+/* COMMON */
+
+/* SIMULATOR  */
+.simulator-main{
+    width: 100%;
+}
+
+.simulator-background img{
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+/* SIMULATOR  */
+
+/* ABOUT */
+.about-main{
+    padding: 70px 0px 0px 0px;
+}
+
+.about-main ul{
+    padding-left: 15px;
+    margin-bottom: 0px;
+} 
+
+.about-main ul li{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+/* ABOUT */
+
+/* COLLECTION MAIN */
+.nft-list{
+    background: linear-gradient(180deg, #EBC16E 0%, rgba(255, 237, 171, 0.84) 100%);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.nft-list img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+    height: 320px;
+    object-fit: contain;
+    padding-top: 20px;
+    background-color: #fc5b83;
+}
+
+.nft-list h5{
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    margin-bottom: 3px;
+}
+
+.nft-list p{
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.collection-header{
+    margin-bottom: 30px;
+}
+
+.collection-header h5{
+    padding: 0px 0px 10px 0px;
+}
+
+.collection-header .subtitle{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.collection-footer h5{
+    padding-bottom: 5px;
+    font-size: 24px;
+}
+
+.collection-main h5.title{
+    padding: 0px 0px 10px 0px;
+    margin-bottom: 0px;
+}
+
+.collection-content a.buynow{
+    margin-left: 10px;
+    display: inline;
+    font-weight: 700;
+}
+
+.collection-content h5{
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    margin-bottom: 10px;
+}
+
+.collection-content p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+.collection-img img{
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.nftcollection-main hr {
+    width: 20%;
+    margin: 10px auto 20px auto;
+    opacity: 1;
+    background-color: #442a14;
+}
+/* COLLECTION MAIN */
+
+
+/* ROADMAP START */
+.roadmap-main{
+    position: relative;
+}
+
+.roadmap-content{
+    text-align: center;
+}
+
+.roadmap-content img{
+    margin: 80px 0px;
+    position: relative;
+}
+
+.roadmap-subcontent{
+    background-color: #FFF0C5;
+    padding: 15px;
+    box-shadow: -6px 6px 0px 0px #442a14;
+    min-height: 230px;
+    position: relative;
+}
+
+.roadmap-subcontent h5{
+    text-align: center;
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.roadmap-subcontent ul{
+    margin-bottom: 0px;
+}
+
+.roadmap-subcontent li{
+    color: #442A14;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 7px;
+    text-align: left;
+}
+
+.roadmap-subcontent.roadmap-subcontent-top::before{
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 2px;
+    bottom: -80px;
+    background: #442a14;
+}
+
+.roadmap-subcontent.roadmap-subcontent-bottom::before{
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 2px;
+    top: -80px;
+    background: #442a14;
+}
+
+.roadmap-subcontent-blank{
+    opacity: 0;
+}
+
+.roadmap-img{
+    position: relative;
+}
+
+.roadmap-img::before{
+    content: "";
+    position: absolute;
+    width: 118px;
+    height: 2px;
+    background-color: #442A14;
+    top: 50%;
+    right: -72px;
+}
+
+.last-roadmap-img::before{
+    display: none;
+}
+/* ROADMAP END */
+
+/* RESPONSIVE */
+@media(max-width: 1199px){
+    .roadmap-img::before{
+        display: none;
+    }
+    .roadmap-subcontent-blank{
+        display: none;
+    }
+    .roadmap-subcontent li{
+        font-size: 16px;
+    }
+    .roadmap-subcontent{
+        min-height: 200px;
+    }
+    .roadmap-subcontent.roadmap-subcontent-top::before{
+        display: none;
+    }
+    .roadmap-content{
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    .roadmap-subcontent.roadmap-subcontent-bottom::before{
+        display: none;
+    }
+    .roadmap-content img{
+        margin: 0px;
+    }
+    .roadmap-content-odd .roadmap-img{
+        margin-right: 25px;
+        margin-left: 0px;
+    }
+    .roadmap-content .roadmap-img{
+        margin-left: 25px;
+    }
+}
+
+@media(max-width: 991px){
+    .collection-img img{
+        margin: 0 auto 30px auto;
+    }
+    .collection-content{
+        text-align: center;
+    }
+    .collection-content h5{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .collection-content h5 br{
+        display: none;
+    }
+    .collection-header .subtitle{
+        width: 100%;
+    }
+    .title{
+        font-size: 35px;
+    }
+    .collection-content p{
+        font-size: 18px;
+    }
+    .about-main ul li{
+        font-size: 18px;
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+    .subtitle{
+        font-size: 18px;
+    }
+    .nft-list h5{
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+    .nft-list p{
+        font-size: 18px;
+    }
+    .collection-footer h5{
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+    .collection-header .subtitle{
+        width: 100%;
+    }
+    .collection-content a.buynow{
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 767px){
+    .title{
+        font-size: 30px;
+    }
+    .roadmap-content{
+        margin-bottom: 70px;
+    }
+    .collection-content h5{
+        font-size: 30px;
+    }
+    .collection-content{
+        text-align: left;
+    }
+    .roadmap-img img{
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 575px){
+    .title{
+        font-size: 26px;
+    }
+    .collection-footer h5{
+        font-size: 20px;
+    }
+    .roadmap-subcontent{
+        box-shadow: 0px 7px 0px 0px #442a14;
+    }
+}
+
+
