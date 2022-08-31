@@ -15,9 +15,14 @@ const Team = () =>{
                             </Col>
                             <Col lg={6} >
                                 <div className="collection-content">
-                                    <h5 className="brown" >Previous Team Project: <br /> Doge Generals</h5>
+                                    <h5 className="brown title" >Previous Team Project: <br /> Doge Generals</h5>
                                     <p className="brown" >Doge Generals brings fascinating historical figures to life by carefully animating beautiful masterpieces, adding super dope audio, with a good dose of meme.</p>
-                                    <a href="#" className="buynow" >CLICK HERE</a>
+                                    <div className="link">
+                                        <a href="https://dogegenerals.com" target="_blank" >dogegenerals.com</a>
+                                        <a href="https://www.google.com" target="_blank" >google.com</a>
+                                        <a href="https://dogegenerals.com" target="_blank" >dogegenerals.com</a>
+                                    </div>
+                                    <a href="https://dogegenerals.com" target="_blank" className="buynow" >CLICK HERE</a>
                                 </div>
                             </Col>
                         </Row>

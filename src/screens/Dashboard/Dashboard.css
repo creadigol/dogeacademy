@@ -9,10 +9,11 @@
     background-repeat: repeat-y;
     background-size: cover;
     padding-bottom: 10px;
+    min-height: 100vh;
 }
 
 .title{
-    font-size: 42px;
+    font-size: 45px;
     font-weight: 900;
     text-align: center;
     padding: 0px 0px 40px 0px;
@@ -22,7 +23,7 @@
 .subtitle{
     font-weight: 500;
     letter-spacing: 0.2px;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -68,10 +69,10 @@ a.buynow, button.buynow{
 } 
 
 .about-main ul li{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
-    line-height: 25px;
-    margin-bottom: 5px;
+    line-height: 28px;
+    margin-bottom: 15px;
     text-align: justify;
 }
 /* ABOUT */
@@ -139,10 +140,7 @@ a.buynow, button.buynow{
 }
 
 .collection-content h5{
-    font-size: 42px;
-    font-weight: 900;
-    letter-spacing: 0.3px;
-    margin-bottom: 10px;
+    text-align: left;
 }
 
 .collection-content p{
@@ -249,6 +247,42 @@ a.buynow, button.buynow{
     display: none;
 }
 /* ROADMAP END */
+
+/* TEAM START */
+.link {
+    margin-bottom: 30px;
+}
+
+.link a{
+    display: block;
+    color: #442A14;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+/* TEAM END */
+
+/* BUY SIMILAR START */
+.buy_similar{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #442A14;
+    padding: 12px 25px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.25);
+}
+
+.buy_similar:hover{
+    color: #fff;
+}
+/* BUY SIMILAR END */
 
 /* RESPONSIVE */
 @media(max-width: 1199px){
@@ -368,14 +402,8 @@ a.buynow, button.buynow{
 }
 
 @media(min-width: 1200px){
-    .collection-content h5{
-        font-size: 47px;
-    }
-    .title{
-        font-size: 47px;
-    }
     .collection-content p{
-        font-size: 18px;
+        font-size: 20px;
         line-height: 30px;
     }
     .footer-main p{
@@ -386,10 +414,10 @@ a.buynow, button.buynow{
         font-size: 16px;
     } */
     .about-main ul li{
-        font-size: 18px;
+        font-size: 20px;
     }
     .collection-img img{
-        max-width: 60%;
+        max-width: 100%;
     }
 }
 

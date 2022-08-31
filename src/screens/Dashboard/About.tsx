@@ -15,7 +15,7 @@ const About = () =>{
                             </Col>
                             <Col lg={7} >
                                 <div className="collection-content">
-                                    <h5 className="brown" >What is the Doge Academy?</h5>
+                                    <h5 className="brown title" >What is the Doge Academy?</h5>
                                     <p className="brown" >The Doge Academy is a community driven Web3 educational project focused on providing real world utility ranging from: </p>
                                     <ul>
                                         <li>1. 1 on 1 resume review and professional coaching by an expert</li>

@@ -6,6 +6,7 @@ import Roadmap from "./Roadmap";
 import Simulation from "../../components/Simulation/Simulation";
 import Footer from "../../components/Layout/Footer/Footer";
 import About from "./About";
+import { Link } from "react-router-dom";
 
 const Dashboard = () =>{
     return(
@@ -17,6 +18,7 @@ const Dashboard = () =>{
                 <Roadmap />
                 <Team />
                 <Footer />
+                <Link to="/mint" className="buy_similar" >Buy This Similar</Link>
             </div>
         </>
     );
