@@ -1,8 +1,25 @@
 .footer-main p{
-    margin: 50px 0px;
+    margin: 50px 0px 20px 0px;
     text-align: center;
     font-weight: 700;
     letter-spacing: 0.5px;
+}
+
+.footer-main ul{
+    padding-left: 0px;
+    text-align: center;
+}
+
+.footer-main li{
+    display: inline-block;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.footer-main li img{
+    box-shadow: 4px 4px 4px 2px rgb(0, 0, 0, 30%);
+    border-radius: 100px;
+    border: 1px solid #fff;
 }
 
 @media(max-width: 991px){

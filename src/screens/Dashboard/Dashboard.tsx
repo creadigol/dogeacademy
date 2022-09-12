@@ -6,6 +6,7 @@ import Roadmap from "./Roadmap";
 import Simulation from "../../components/Simulation/Simulation";
 import Footer from "../../components/Layout/Footer/Footer";
 import About from "./About";
+import TeamList from "./TeamList";
 import { Link } from "react-router-dom";
 
 const Dashboard = () =>{
@@ -15,6 +16,7 @@ const Dashboard = () =>{
                 <Simulation />
                 <About />
                 <NftCollection />
+                <TeamList />
                 <Roadmap />
                 <Team />
                 <Footer />

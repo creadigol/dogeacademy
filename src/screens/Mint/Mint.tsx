@@ -1,5 +1,6 @@
-import { Col, Container, Row } from "react-bootstrap";
-import dog from "../../assets/image/mint-logo.svg";
+import { Col, Container, Row, Tab, Nav } from "react-bootstrap";
+import dog from "../../assets/image/dog.svg";
+import dogleft from "../../assets/image/dog_left.svg";
 import Footer from "../../components/Layout/Footer/Footer";
 import { ReducerStateIF } from "../../redux/reducers";
 import "./Mint.css";
@@ -158,96 +159,153 @@ const Mint = () =>{
         <>
             <div className="subsection-main">
                 <Simulation />
-                <div className="mint-main">
-                    <Container>
-                        <Row className="align-items-center" >
-                            <Col xl={{ order: 1 , span: 7 }} lg={{ order: 1 , span: 6 }} md={{ order: 2 , span: 12 }} sm={{ order: 2 , span: 12 }} xs={{ order: 2 , span: 12 }} >
-                                <div className="mintbox-image" >
-                                    <img src={dog} alt="logo" />
-                                    <h5>The <br /> Doge <br /> Academy</h5>
-                                </div>
-                            </Col>
-                            <Col xl={{ order: 2 , span: 5 }} lg={{ order: 2 , span: 6 }} md={{ order: 1 , span: 12 }} sm={{ order: 1 , span: 12 }} xs={{ order: 1 , span: 12 }} >
-                                <div className="mintbox-main" >
-                                    <div className="mintbox-main-content">
-                                        <div className="mintbox-header">
-                                            <h5 className="brown" >PreSale Mint NFTs</h5>
-                                            <p>{totalNft.minted}/{totalNft.total} NFTs Minted</p>
-                                        </div>
-                                        <form name="mintform" method="post" onSubmit={mintNft}>
-                                            <div className="mintbox-body">
-                                                <div className="mintbox-content" >
-                                                    <Col lg={12} >
-                                                        <div className="mintbox-subcontent" >
-                                                            <Row>
-                                                                <Col xs={4} >
-                                                                    <p>Price</p>
-                                                                </Col>
-                                                                <Col xs={8} >
-                                                                    <h5 className="text-center" >{price}</h5>
-                                                                </Col>
-                                                            </Row>
-                                                        </div>
-                                                    </Col>
-                                                </div>
-                                                <div className="mintbox-content" >
-                                                    <Col lg={12} >
-                                                        <div className="mintbox-subcontent" >
-                                                            <Row className="align-items-center" >
-                                                                <Col xs={4} >
-                                                                    <p>Amount</p>
-                                                                </Col>
-                                                                <Col xs={8} className="text-center" >
-                                                                    <h5><span onClick={decreamentNum}>-</span>{number}<span onClick={increamentNum}>+</span></h5>
-                                                                </Col>
-                                                            </Row>
-                                                        </div>
-                                                    </Col>
-                                                </div>
-                                                <div className="mintbox-content" >
-                                                    <Col lg={12} >
-                                                        <div className="mintbox-subcontent" >
-                                                            <Row>
-                                                                <Col xs={4} >
-                                                                    <p>Total</p>
-                                                                </Col>
-                                                                <Col xs={8} >
-                                                                    <h5 className="text-center" >{price*number}</h5>
-                                                                </Col>
-                                                            </Row>
-                                                        </div>
-                                                    </Col>
-                                                </div>
-                                            </div>
-                                            <>
-                                                {
-                                                    (blockchain.account == null)?(
-                                                        <button onClick={(e) => {
-                                                            e.preventDefault();
-                                                            dispatch(connect());
-                                                        }}  className="buynow"> CONNECT</button>
-                                                    ):(
-                                                        <>
-                                                            { !loding?(                                            
-                                                                <>
-                                                                    <button type="submit" className="buynow">CLAIM NFT</button>
-                                                                    <h6>Wallet Id : {blockchain.account.substring(0, 5)+'...'+blockchain.account.slice(-5)}</h6>
-                                                                </>
-                                                            ):(
-                                                                <button type="button" className="buynow" disabled>Wait...</button>
-                                                            )}
-                                                        </>
-                                                    )
-                                                }
-                                            </>
-                                        </form>
+                <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                    <div className="mint-main">
+                        <Container>
+                            <Row>
+                                <Col xl={12} >
+                                    <div className="mint_option" >
+                                        <Nav variant="pills">
+                                            <Nav.Item>
+                                                <Nav.Link eventKey="first">Join Minting</Nav.Link>
+                                            </Nav.Item>
+                                            <Nav.Item>
+                                                <Nav.Link eventKey="second">Pre Register</Nav.Link>
+                                            </Nav.Item>
+                                            <Nav.Item>
+                                                <Nav.Link eventKey="third">Public Mint</Nav.Link>
+                                            </Nav.Item>
+                                        </Nav>
                                     </div>
-                                    <div className="backgroundcolor-mint" ></div>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
+                                </Col>
+                                <Col xl={{ order: 1 , span: 12 }} lg={{ order: 2 , span: 6 }} md={{ order: 1 , span: 12 }} sm={{ order: 1 , span: 12 }} xs={{ order: 1 , span: 12 }} >
+                                    <Tab.Content>
+                                        <Tab.Pane eventKey="first">
+                                            <div className="preregister_content">
+                                                <h6>Join Minting</h6>
+                                                <p>Join minting allowlist and mint on Oct. 26th for a 50% discount. This requires a Metamask or Crypto Wallet to Register. Make sure to provide your email address when signing up for updates! (Add Button that links to Pre-mint.xyz)</p>
+                                            </div>
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="second">
+                                            <div className="preregister_content">
+                                                <h6>Pre Register</h6>
+                                                <p>Pre-register and guarantee your seat at a discounted rate, and pay with with credit card or crypto (Button). <span>Once we start minting the First Semester NFTs, we will host a special class where I teach you how to set up a wallet, and claim the NFT. </span></p>
+                                                <a href="https://www.moonpay.com/" target="_blank" className="buynow" >PAY</a>
+                                            </div>
+                                        </Tab.Pane>
+                                        <Tab.Pane eventKey="third">
+                                            <Row>
+                                                <Col xl={12} >
+                                                    <div className="minting_info">
+                                                        <h6>Minting Information</h6>
+                                                        <ul>
+                                                            <li>Allow List Mint Cost : <span>.05 ETH</span></li>
+                                                            <li>Pre-registration Cost : <span>$ 100.00</span></li>
+                                                            <li>Public Sale Mint Cost : <span>1 ETH</span></li>
+                                                            <li>Mint Date : <span>Oct 26th-Oct 31st</span></li>
+                                                            <li>Mint # : <span>Open Mint</span></li>
+                                                        </ul>
+                                                    </div>                
+                                                </Col>
+                                            </Row>
+                                            <Row className="align-items-center" >
+                                                <Col xl={3} >
+                                                    <div className="doge_logo">
+                                                        <img src={dog} alt="doge" />
+                                                    </div>
+                                                </Col>
+                                                <Col xl={6} >
+                                                    <div className="mintbox-main" >
+                                                        <div className="mintbox-main-content">
+                                                            <div className="mintbox-header">
+                                                                <h5 className="brown" >PreSale Mint NFTs</h5>
+                                                                <p>{totalNft.minted}/{totalNft.total} NFTs Minted</p>
+                                                            </div>
+                                                            <form name="mintform" method="post" onSubmit={mintNft}>
+                                                                <div className="mintbox-body">
+                                                                    <div className="mintbox-content" >
+                                                                        <Col lg={12} >
+                                                                            <div className="mintbox-subcontent" >
+                                                                                <Row>
+                                                                                    <Col xs={4} >
+                                                                                        <p>Price</p>
+                                                                                    </Col>
+                                                                                    <Col xs={8} >
+                                                                                        <h5 className="text-center" >{price}</h5>
+                                                                                    </Col>
+                                                                                </Row>
+                                                                            </div>
+                                                                        </Col>
+                                                                    </div>
+                                                                    <div className="mintbox-content" >
+                                                                        <Col lg={12} >
+                                                                            <div className="mintbox-subcontent" >
+                                                                                <Row className="align-items-center" >
+                                                                                    <Col xs={4} >
+                                                                                        <p>Amount</p>
+                                                                                    </Col>
+                                                                                    <Col xs={8} className="text-center" >
+                                                                                        <h5><span onClick={decreamentNum}>-</span>{number}<span onClick={increamentNum}>+</span></h5>
+                                                                                    </Col>
+                                                                                </Row>
+                                                                            </div>
+                                                                        </Col>
+                                                                    </div>
+                                                                    <div className="mintbox-content" >
+                                                                        <Col lg={12} >
+                                                                            <div className="mintbox-subcontent" >
+                                                                                <Row>
+                                                                                    <Col xs={4} >
+                                                                                        <p>Total</p>
+                                                                                    </Col>
+                                                                                    <Col xs={8} >
+                                                                                        <h5 className="text-center" >{price*number}</h5>
+                                                                                    </Col>
+                                                                                </Row>
+                                                                            </div>
+                                                                        </Col>
+                                                                    </div>
+                                                                </div>
+                                                                <>
+                                                                    {
+                                                                        (blockchain.account == null)?(
+                                                                            <button onClick={(e) => {
+                                                                                e.preventDefault();
+                                                                                dispatch(connect());
+                                                                            }}  className="buynow"> CONNECT</button>
+                                                                        ):(
+                                                                            <>
+                                                                                { !loding?(                                            
+                                                                                    <>
+                                                                                        <button type="submit" className="buynow">CLAIM NFT</button>
+                                                                                        <h6>Wallet Id : {blockchain.account.substring(0, 5)+'...'+blockchain.account.slice(-5)}</h6>
+                                                                                    </>
+                                                                                ):(
+                                                                                    <button type="button" className="buynow" disabled>Wait...</button>
+                                                                                )}
+                                                                            </>
+                                                                        )
+                                                                    }
+                                                                </>
+                                                            </form>
+                                                        </div>
+                                                        <div className="backgroundcolor-mint" ></div>
+                                                    </div>
+                                                </Col>
+                                                <Col xl={3} >
+                                                    <div className="doge_logo">
+                                                        <img src={dogleft} alt="doge" />
+                                                    </div>               
+                                                </Col>
+                                            </Row>
+                                            
+                                        </Tab.Pane>
+                                    </Tab.Content>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </div>
+                </Tab.Container>
                 <Footer />
             </div>
         </>

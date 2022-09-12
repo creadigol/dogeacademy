@@ -1,11 +1,12 @@
 .mint-main{
     margin-bottom: 80px;
+    margin-top: 80px;
 }
 
 .mintbox-image{
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    border-left: 1px dashed;
 }
 
 .mintbox-image img{
@@ -30,8 +31,9 @@
     width: 80%;
     position: relative;
     z-index: 1;
-    margin-top: -80px;
+    /* margin-top: -80px; */
     width: 360px;
+    margin: 0 auto;
 }
 
 .mintbox-header{
@@ -108,7 +110,34 @@
     font-weight: 700;
 }
 
-.backgroundcolor-mint{
+.minting_info{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.minting_info h6{
+    font-size: 22px;
+    font-weight: 800;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(33,37,41,0.3);
+    display: inline-block;
+}
+
+.minting_info ul{
+    padding-left: 0px;
+}
+
+.minting_info li{
+    list-style: none;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    width: 33.33%;
+}
+
+/* .backgroundcolor-mint{
     width: 340px;
     height: 250px;
     background-color: #442A14;
@@ -116,11 +145,56 @@
     right: 70px;
     bottom: -22px;
     z-index: 0;
-}
+} */
 
 #canvas {
     width: 100%;
     height: 400px;
+}
+
+/* Mint Tab CSS */
+.mint_option{
+    padding: 5px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.mint_option .nav-link{
+    cursor: pointer;
+    color: #442A14;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.mint_option .nav-pills .nav-link.active, .mint_option .nav-pills .show>.nav-link{
+    background-color: #442A14;
+}
+
+.mint-main .tab-content{
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px dashed rgba(33,37,41,0.3);
+}
+
+.preregister_content h6{
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-size: 22px;
+}
+
+.preregister_content p{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+.preregister_content a.buynow, button.buynow{
+    margin: inherit;
+}
+
+.preregister_content p span{
+    color: #ff0000;
 }
 
 @media(max-width: 1199px){

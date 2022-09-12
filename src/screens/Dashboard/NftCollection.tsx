@@ -51,7 +51,7 @@ const NftCollection = () =>{
                 <Container>
                     <div className="collection-header">
                         <h5 className="title brown" >The Doge Academy Collection</h5>
-                        <p className="subtitle" >The Doge Academy art is deeply researched, hand drawn, and is based primarily on real historical figures throughout history and from all over the world. </p>
+                        <p className="subtitle" >The Doge Academy art is deeply researched, hand drawn, and is based primarily on real historical figures throughout history and from all over the world.</p>
                     </div>
                     <Row>
                         {data.map((d) =>(

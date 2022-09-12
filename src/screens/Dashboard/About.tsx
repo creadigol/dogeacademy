@@ -7,7 +7,7 @@ const About = () =>{
             <div className="collection-main about-main common">
                 <Container>
                     <div className="collection-content-main">
-                        <Row className="align-items-center" >
+                        <Row>
                             <Col lg={5} >
                                 <div className="collection-img">
                                     <img src={about} alt="collection-img" />
@@ -15,12 +15,15 @@ const About = () =>{
                             </Col>
                             <Col lg={7} >
                                 <div className="collection-content">
-                                    <h5 className="brown title" >What is the Doge Academy?</h5>
+                                    <h5 className="brown title" >Welcome to the Peoples Academy, The Doge Academy!</h5>
                                     <p className="brown" >The Doge Academy is a community driven Web3 educational project focused on providing real world utility ranging from: </p>
                                     <ul>
-                                        <li>1. 1 on 1 resume review and professional coaching by an expert</li>
-                                        <li>2. Leveraging cutting edge web3 technology to enable community to select high quality token gated courses on subjects like creating a generative NFT Collection, 3d printing, programing, or robotics. </li>
-                                        <li>3. Promote open public discourse on subjects like history and technology.</li>
+                                        <li>The Doge Academy is an Web3 school where you will be able to learn about NFTs and Web3 from experts. The first semester will be half price to encourage early adoption.We host weekly classes for free, so make sure to see our schedule on twitter!
+                                        </li>
+                                        <li>If you pre-register or purchase Doge Academy 1st Semester Pass you will receive a hand drawn Profile Picture NFT with deeply researched traits based on historical figures and you will also have the opportunity to attend a live 8 week course which will teach you how to create and deploy your own NFT collection.</li>
+                                        <li>At the conclusion of the course, you will receive a certificate for completion as well as a survey to share feedback about your experience and learning.</li>
+                                        <li>The Doge Academy would not exist without the support of the @ownthedoge community, please check out their discord and twitter below!</li>
+                                        <li>If you have any questions, please pop into our discord and open a support ticket or shoot me an e-mail at DogeKing@DogeGenerals.com</li>
                                     </ul>
                                 </div>
                             </Col>
