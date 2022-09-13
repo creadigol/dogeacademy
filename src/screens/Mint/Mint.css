@@ -177,6 +177,12 @@
     border-top: 1px dashed rgba(33,37,41,0.3);
 }
 
+.preregister_content{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgba(33,37,41,0.3);
+}
+
 .preregister_content h6{
     font-weight: 800;
     letter-spacing: 0.5px;
@@ -187,10 +193,14 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 16px;
+    margin-bottom: 0px;
 }
 
 .preregister_content a.buynow, button.buynow{
     margin: inherit;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 
 .preregister_content p span{
@@ -208,7 +218,7 @@
 
 @media(max-width: 991px){
     .mintbox-main-content{
-        margin: 50px auto 0 auto;
+        margin: 10px auto 0 auto;
     }
     .backgroundcolor-mint{
         right: 210px;
@@ -226,6 +236,15 @@
     .mintbox-content{
         display: inherit;
         justify-content: inherit;
+    }
+    .minting_info{
+        margin-bottom: 0px;
+    }
+    .minting_info li{
+        width: 50%;
+    }
+    .doge_logo{
+        display: none;
     }
 }
 

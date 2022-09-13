@@ -14,8 +14,8 @@
 
 /* Main Title Font Size Change */
 .title{
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 34px;
+    font-weight: 800;
     text-align: center;
     padding: 0px 0px 40px 0px;
     margin-bottom: 0px;
@@ -93,9 +93,7 @@ a.buynow, button.buynow{
     border-radius: 10px;
     box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
     margin-bottom: 15px;
-    height: 320px;
     object-fit: contain;
-    padding-top: 20px;
     background-color: #fc5b83;
 }
 
@@ -110,6 +108,23 @@ a.buynow, button.buynow{
     margin-bottom: 10px;
     font-weight: 600;
     letter-spacing: 0.2px;
+    text-align: justify;
+}
+
+.nft-list p a{
+    color: #ff6014!important;
+    text-transform: capitalize;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.collection_content_modal .modal-content{
+    padding: 30px;
+    background: linear-gradient(180deg, #EBC16E 0%, rgba(255, 237, 171, 0.84) 100%);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: justify;
+    color: #333;
 }
 
 .collection-header{
@@ -168,22 +183,43 @@ a.buynow, button.buynow{
 /* COLLECTION MAIN */
 
 /* TEAM LIST START */
-.team_content .title{
-    text-align: left;
+.team_detail img.team_image{
+    width: 100%;
+    height: 166px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
 }
 
-.team_content .subtitle{
-    text-align: left;
-    width: 100%;
+.team_detail_image{
+    position: relative;
 }
 
-.team_image{
-    width: 100%;
-    background: #fff0c5;
-    padding: 10px 10px 0px 10px;
-    box-shadow: -6px 6px 0px 0px #442a14;
-    border-radius: 3px;
-    margin-bottom: 15px;
+.team_detail_image a{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    bottom: 35px;
+    right: 5px;
+}
+
+.team_detail_image a img{
+    width: 35px;
+    height: 35px;
+}
+
+.team_detail h5{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.team_detail h6{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
 }
 /* TEAM LIST END */
 
@@ -366,6 +402,7 @@ a.buynow, button.buynow{
     }
     .collection-content p{
         font-size: 18px;
+        text-align: left;
     }
     .about-main ul li{
         font-size: 18px;
@@ -392,6 +429,10 @@ a.buynow, button.buynow{
     .collection-content a.buynow{
         margin: 0 auto;
     }
+    .team_detail img.team_image{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media(max-width: 767px){
@@ -409,6 +450,15 @@ a.buynow, button.buynow{
     }
     .roadmap-img img{
         margin-bottom: 20px;
+    }
+    .nft-list h5{
+        font-size: 16px;
+    }
+    .nft-list p{
+        font-size: 14px;
+    }
+    .nft-list{
+        min-height: 465px;
     }
 }
 

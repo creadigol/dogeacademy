@@ -11,8 +11,8 @@ const Footer = () =>{
                 <ul>
                     <li><a href="https://mobile.twitter.com/thedogeacademy" target="_blank" ><img src={twitter} alt="twitter" /></a></li>
                     <li><a href="https://discord.com/invite/9P63VNTubV" target="_blank" ><img src={discord} alt="twitter" /></a></li>
-                    <li><a href="https://mobile.twitter.com/ownthedoge" target="_blank" ><img src={twitter} alt="twitter" /></a></li>
-                    <li><a href="https://medium.com/@deanofdogeacademy/the-doge-academy-is-borking-new-ground-3190e7ef337a" target="_blank" ><img src={whitepaper} alt="twitter" /></a></li>
+                    {/* <li><a href="https://mobile.twitter.com/ownthedoge" target="_blank" ><img src={twitter} alt="twitter" /></a></li>
+                    <li><a href="https://medium.com/@deanofdogeacademy/the-doge-academy-is-borking-new-ground-3190e7ef337a" target="_blank" ><img src={whitepaper} alt="twitter" /></a></li> */}
                 </ul>
             </div>
         </>
