@@ -1,8 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 import about from "../../assets/image/mint-logo.svg";
-
-const About = () =>{
-    return(
+import { Link } from "react-router-dom";
+const About = () => {
+    return (
         <>
             <div className="collection-main about-main common">
                 <Container>
@@ -10,7 +10,7 @@ const About = () =>{
                         <Row>
                             <Col lg={5} >
                                 <div className="collection-img">
-                                    <img src={about} alt="collection-img" />
+                                    <img src={about} alt="collection-img" className="about-img" />
                                 </div>
                             </Col>
                             <Col lg={7} >
