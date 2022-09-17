@@ -1,63 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" href="%PUBLIC_URL%/logo.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta
-            name="description"
-            content="Web site created using create-react-app"
-        />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-        <!-- <link rel="stylesheet" href="../src/assets/"> -->
-        <title>Doge Academy</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-        />
-        <!-- SLICK CAROUSEL -->
-        <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-    </head>
-    <body>
-        <div id="root"></div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" ></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                console.clear();
-                console.log("lsakdfalskjdflnksd");
 
-                const config = {
-                    src: "%PUBLIC_URL%/open-sheet.png",
-                    rows: 15,
-                    cols: 7
-                };
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- <link rel="stylesheet" href="../src/assets/"> -->
+    <title>Doge Academy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+    <!-- SLICK CAROUSEL -->
+    <link rel="stylesheet" type="text/css" charset="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+</head>
 
-                // UTILS
+<body>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.clear();
+            console.log("lsakdfalskjdflnksd");
 
-                const randomRange = (min, max) => min + Math.random() * (max - min);
+            const config = {
+                src: "%PUBLIC_URL%/open-sheet.png",
+                rows: 15,
+                cols: 7
+            };
 
-                const randomIndex = (array) => randomRange(0, array.length) | 0;
+            // UTILS
 
-                const removeFromArray = (array, i) => array.splice(i, 1)[0];
+            const randomRange = (min, max) => min + Math.random() * (max - min);
 
-                const removeItemFromArray = (array, item) =>
+            const randomIndex = (array) => randomRange(0, array.length) | 0;
+
+            const removeFromArray = (array, i) => array.splice(i, 1)[0];
+
+            const removeItemFromArray = (array, item) =>
                 removeFromArray(array, array.indexOf(item));
 
-                const removeRandomFromArray = (array) =>
+            const removeRandomFromArray = (array) =>
                 removeFromArray(array, randomIndex(array));
 
-                const getRandomFromArray = (array) => array[randomIndex(array) | 0];
+            const getRandomFromArray = (array) => array[randomIndex(array) | 0];
 
-                // TWEEN FACTORIES
+            // TWEEN FACTORIES
 
-                const resetPeep = ({ stage, peep }) => {
+            const resetPeep = ({ stage, peep }) => {
                 const direction = Math.random() > 0.5 ? 1 : -1;
                 // using an ease function to skew random to lower values to help hide that peeps have no legs
-                const offsetY = 100 - 250 * gsap.parseEase("power2.in")(Math.random());
+                const offsetY = 90 - 160 * gsap.parseEase("power2.in")(Math.random());
                 const startY = stage.height - peep.height + offsetY;
                 let startX;
                 let endX;
@@ -81,9 +78,9 @@
                     startY,
                     endX
                 };
-                };
+            };
 
-                const normalWalk = ({ peep, props }) => {
+            const normalWalk = ({ peep, props }) => {
                 const { startX, startY, endX } = props;
 
                 const xDuration = 10;
@@ -112,13 +109,13 @@
                 );
 
                 return tl;
-                };
+            };
 
-                const walks = [normalWalk];
+            const walks = [normalWalk];
 
-                // CLASSES
+            // CLASSES
 
-                class Peep {
+            class Peep {
                 constructor({ image, rect }) {
                     this.image = image;
                     this.setRect(rect);
@@ -145,27 +142,27 @@
                     ctx.drawImage(...this.drawArgs);
                     ctx.restore();
                 }
-                }
+            }
 
-                // MAIN
+            // MAIN
 
-                const img = document.createElement("img");
-                img.onload = init;
-                img.src = config.src;
+            const img = document.createElement("img");
+            img.onload = init;
+            img.src = config.src;
 
-                const canvas = document.querySelector("#canvas");
-                const ctx = canvas.getContext("2d");
+            const canvas = document.querySelector("#canvas");
+            const ctx = canvas.getContext("2d");
 
-                const stage = {
+            const stage = {
                 width: 0,
                 height: 0
-                };
+            };
 
-                const allPeeps = [];
-                const availablePeeps = [];
-                const crowd = [];
+            const allPeeps = [];
+            const availablePeeps = [];
+            const crowd = [];
 
-                function init() {
+            function init() {
                 createPeeps();
 
                 // resize also (re)populates the stage
@@ -173,9 +170,9 @@
 
                 gsap.ticker.add(render);
                 window.addEventListener("resize", resize);
-                }
+            }
 
-                function createPeeps() {
+            function createPeeps() {
                 const { rows, cols } = config;
                 const { naturalWidth: width, naturalHeight: height } = img;
                 const total = rows * cols;
@@ -184,20 +181,20 @@
 
                 for (let i = 0; i < total; i++) {
                     allPeeps.push(
-                    new Peep({
-                        image: img,
-                        rect: [
-                        (i % rows) * rectWidth,
-                        ((i / rows) | 0) * rectHeight,
-                        rectWidth,
-                        rectHeight
-                        ]
-                    })
+                        new Peep({
+                            image: img,
+                            rect: [
+                                (i % rows) * rectWidth,
+                                ((i / rows) | 0) * rectHeight,
+                                rectWidth,
+                                rectHeight
+                            ]
+                        })
                     );
                 }
-                }
+            }
 
-                function resize() {
+            function resize() {
                 stage.width = canvas.clientWidth;
                 stage.height = canvas.clientHeight;
                 canvas.width = stage.width * devicePixelRatio;
@@ -212,22 +209,22 @@
                 availablePeeps.push(...allPeeps);
 
                 initCrowd();
-                }
+            }
 
-                function initCrowd() {
+            function initCrowd() {
                 while (availablePeeps.length) {
                     // setting random tween progress spreads the peeps out
                     addPeepToCrowd().walk.progress(Math.random());
                 }
-                }
+            }
 
-                function addPeepToCrowd() {
+            function addPeepToCrowd() {
                 const peep = removeRandomFromArray(availablePeeps);
                 const walk = getRandomFromArray(walks)({
                     peep,
                     props: resetPeep({
-                    peep,
-                    stage
+                        peep,
+                        stage
                     })
                 }).eventCallback("onComplete", () => {
                     removePeepFromCrowd(peep);
@@ -240,14 +237,14 @@
                 crowd.sort((a, b) => a.anchorY - b.anchorY);
 
                 return peep;
-                }
+            }
 
-                function removePeepFromCrowd(peep) {
+            function removePeepFromCrowd(peep) {
                 removeItemFromArray(crowd, peep);
                 availablePeeps.push(peep);
-                }
+            }
 
-                function render() {
+            function render() {
                 canvas.width = canvas.width;
                 ctx.save();
                 ctx.scale(devicePixelRatio, devicePixelRatio);
@@ -257,9 +254,10 @@
                 });
 
                 ctx.restore();
-                }
+            }
 
-            })();
-        </script>
-    </body>
+        })();
+    </script>
+</body>
+
 </html>

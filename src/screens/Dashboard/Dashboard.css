@@ -1,9 +1,9 @@
 /* COMMON */
-.common{
+.common {
     padding: 110px 0px 0px 0px;
 }
 
-.subsection-main{
+.subsection-main {
     background-image: url(../../assets/image/main-bg.png);
     width: 100%;
     background-repeat: repeat-y;
@@ -13,7 +13,7 @@
 }
 
 /* Main Title Font Size Change */
-.title{
+.title {
     font-size: 34px;
     font-weight: 800;
     text-align: center;
@@ -22,14 +22,15 @@
 }
 
 /* Sub Title Font Size Change */
-.subtitle{
+.subtitle {
     font-weight: 500;
     letter-spacing: 0.2px;
     font-size: 20px;
     text-align: center;
 }
 
-a.buynow, button.buynow{
+a.buynow,
+button.buynow {
     background: linear-gradient(180deg, #FFECB5 -60.99%, #E6C259 70.42%);
     padding: 10px 20px;
     display: inline-block;
@@ -46,41 +47,44 @@ a.buynow, button.buynow{
     box-shadow: -6px 6px 0px 0px #442a14;
     letter-spacing: 0.5px;
 }
+
 /* COMMON */
 
 /* SIMULATOR  */
-.simulator-main{
+.simulator-main {
     width: 100%;
 }
 
-.simulator-background img{
+.simulator-background img {
     width: 100%;
     height: 390px;
     object-fit: cover;
 }
+
 /* SIMULATOR  */
 
 /* ABOUT */
-.about-main{
+.about-main {
     padding: 70px 0px 0px 0px;
 }
 
-.about-main ul{
+.about-main ul {
     padding-left: 15px;
     margin-bottom: 0px;
-} 
+}
 
-.about-main ul li{
+.about-main ul li {
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
     margin-bottom: 15px;
     text-align: justify;
 }
+
 /* ABOUT */
 
 /* COLLECTION MAIN */
-.nft-list{
+.nft-list {
     background: linear-gradient(180deg, #EBC16E 0%, rgba(255, 237, 171, 0.84) 100%);
     padding: 20px;
     border-radius: 5px;
@@ -88,7 +92,7 @@ a.buynow, button.buynow{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.nft-list img{
+.nft-list img {
     width: 100%;
     border-radius: 10px;
     box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -97,28 +101,28 @@ a.buynow, button.buynow{
     background-color: #fc5b83;
 }
 
-.nft-list h5{
+.nft-list h5 {
     font-size: 20px;
     font-weight: 900;
     letter-spacing: 0.4px;
     margin-bottom: 3px;
 }
 
-.nft-list p{
+.nft-list p {
     margin-bottom: 10px;
     font-weight: 600;
     letter-spacing: 0.2px;
     text-align: justify;
 }
 
-.nft-list p a{
-    color: #ff6014!important;
+.nft-list p a {
+    color: #ff6014 !important;
     text-transform: capitalize;
     font-weight: 700;
     cursor: pointer;
 }
 
-.collection_content_modal .modal-content{
+.collection_content_modal .modal-content {
     padding: 30px;
     background: linear-gradient(180deg, #EBC16E 0%, rgba(255, 237, 171, 0.84) 100%);
     font-size: 16px;
@@ -127,49 +131,55 @@ a.buynow, button.buynow{
     color: #333;
 }
 
-.collection-header{
+.collection-header {
     margin-bottom: 30px;
 }
 
-.collection-header h5{
+.collection-header h5 {
     padding: 0px 0px 10px 0px;
 }
 
-.collection-header .subtitle{
+.collection-header .subtitle {
     width: 70%;
     margin: 0 auto;
 }
 
-.collection-footer h5{
+.collection-footer h5 {
     padding-bottom: 5px;
     font-size: 24px;
 }
 
-.collection-main h5.title{
+.collection-main h5.title {
     padding: 0px 0px 10px 0px;
     margin-bottom: 0px;
 }
 
-.collection-content a.buynow{
+.collection-content a.buynow {
     margin-left: 10px;
     display: inline;
     font-weight: 700;
 }
 
-.collection-content h5{
+.collection-content h5 {
     text-align: left;
 }
 
 /* Team Content Font Size */
-.collection-content p{
+.collection-content p {
     font-size: 20px;
     font-weight: 600;
     line-height: 25px;
     margin-bottom: 25px;
 }
 
-.collection-img img{
-    max-width: 300px;
+.collection-img .about-img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.collection-img .team-img {
+    max-width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -180,64 +190,72 @@ a.buynow, button.buynow{
     opacity: 1;
     background-color: #442a14;
 }
+
 /* COLLECTION MAIN */
 
 /* TEAM LIST START */
-.team_detail img.team_image{
-    width: 100%;
-    height: 166px;
+.team_detail {
+    text-align: center;
+}
+
+.team_detail img.team_image {
+    max-width: 250px;
+    height: 100%;
+    /* height: 166px; */
     object-fit: cover;
     border-radius: 100%;
     border: 5px solid #fff;
     margin-bottom: 20px;
 }
 
-.team_detail_image{
+.team_detail_image {
     position: relative;
 }
 
-.team_detail_image a{
+.team_detail_image a {
     position: absolute;
     width: 35px;
     height: 35px;
-    bottom: 35px;
-    right: 5px;
+    bottom: 34px;
+    right: 81px;
 }
 
-.team_detail_image a img{
+.team_detail_image a img {
     width: 35px;
     height: 35px;
 }
 
-.team_detail h5{
+.team_detail h5 {
     text-align: center;
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 0.5px;
 }
 
-.team_detail h6{
+.team_detail h6 {
     text-align: center;
     font-size: 16px;
     font-weight: 600;
+    margin-bottom: 10px;
 }
+
 /* TEAM LIST END */
 
 /* ROADMAP START */
-.roadmap-main{
+.roadmap-main {
     position: relative;
 }
 
-.roadmap-content{
+.roadmap-content {
     text-align: center;
 }
 
-.roadmap-content img{
+.roadmap-content img {
     margin: 80px 0px;
     position: relative;
 }
 
-.roadmap-subcontent{
+.roadmap-subcontent {
     background-color: #FFF0C5;
     padding: 15px;
     box-shadow: -6px 6px 0px 0px #442a14;
@@ -245,18 +263,18 @@ a.buynow, button.buynow{
     position: relative;
 }
 
-.roadmap-subcontent h5{
+.roadmap-subcontent h5 {
     text-align: center;
     font-weight: 800;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.roadmap-subcontent ul{
+.roadmap-subcontent ul {
     margin-bottom: 0px;
 }
 
-.roadmap-subcontent li{
+.roadmap-subcontent li {
     color: #442A14;
     font-size: 14px;
     font-weight: 700;
@@ -265,7 +283,7 @@ a.buynow, button.buynow{
     text-align: left;
 }
 
-.roadmap-subcontent.roadmap-subcontent-top::before{
+.roadmap-subcontent.roadmap-subcontent-top::before {
     content: "";
     position: absolute;
     height: 80px;
@@ -274,7 +292,7 @@ a.buynow, button.buynow{
     background: #442a14;
 }
 
-.roadmap-subcontent.roadmap-subcontent-bottom::before{
+.roadmap-subcontent.roadmap-subcontent-bottom::before {
     content: "";
     position: absolute;
     height: 80px;
@@ -283,15 +301,15 @@ a.buynow, button.buynow{
     background: #442a14;
 }
 
-.roadmap-subcontent-blank{
+.roadmap-subcontent-blank {
     opacity: 0;
 }
 
-.roadmap-img{
+.roadmap-img {
     position: relative;
 }
 
-.roadmap-img::before{
+.roadmap-img::before {
     content: "";
     position: absolute;
     width: 118px;
@@ -301,9 +319,10 @@ a.buynow, button.buynow{
     right: -72px;
 }
 
-.last-roadmap-img::before{
+.last-roadmap-img::before {
     display: none;
 }
+
 /* ROADMAP END */
 
 /* TEAM START */
@@ -312,7 +331,7 @@ a.buynow, button.buynow{
 }
 
 /* Team Content Font Size */
-.link a{
+.link a {
     display: block;
     color: #442A14;
     text-decoration: none;
@@ -321,10 +340,11 @@ a.buynow, button.buynow{
     letter-spacing: 0.5px;
     margin-bottom: 10px;
 }
+
 /* TEAM END */
 
 /* BUY SIMILAR START */
-.buy_similar{
+.buy_similar {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -338,193 +358,235 @@ a.buynow, button.buynow{
     box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.25);
 }
 
-.buy_similar:hover{
+.buy_similar:hover {
     color: #fff;
 }
+
 /* BUY SIMILAR END */
 
 /* RESPONSIVE */
-@media(max-width: 1199px){
-    .roadmap-img::before{
+@media(max-width: 1199px) {
+    .roadmap-img::before {
         display: none;
     }
-    .roadmap-subcontent-blank{
+
+    .roadmap-subcontent-blank {
         display: none;
     }
-    .roadmap-subcontent li{
+
+    .roadmap-subcontent li {
         font-size: 16px;
     }
-    .roadmap-subcontent{
+
+    .roadmap-subcontent {
         min-height: 200px;
     }
-    .roadmap-subcontent.roadmap-subcontent-top::before{
+
+    .roadmap-subcontent.roadmap-subcontent-top::before {
         display: none;
     }
-    .roadmap-content{
+
+    .roadmap-content {
         display: flex;
         align-items: center;
         margin-bottom: 35px;
     }
-    .roadmap-subcontent.roadmap-subcontent-bottom::before{
+
+    .roadmap-subcontent.roadmap-subcontent-bottom::before {
         display: none;
     }
-    .roadmap-content img{
+
+    .roadmap-content img {
         margin: 0px;
     }
-    .roadmap-content-odd .roadmap-img{
+
+    .roadmap-content-odd .roadmap-img {
         margin-right: 25px;
         margin-left: 0px;
     }
-    .roadmap-content .roadmap-img{
+
+    .roadmap-content .roadmap-img {
         margin-left: 25px;
     }
 }
 
-@media(max-width: 991px){
-    .collection-img img{
+@media(max-width: 991px) {
+    .collection-img img {
         margin: 0 auto 30px auto;
     }
-    .collection-content{
+
+    .collection-content {
         text-align: center;
     }
-    .collection-content h5{
+
+    .collection-content h5 {
         font-size: 35px;
         margin-bottom: 15px;
     }
-    .collection-content h5 br{
+
+    .collection-content h5 br {
         display: none;
     }
-    .collection-header .subtitle{
+
+    .collection-header .subtitle {
         width: 100%;
     }
-    .title{
+
+    .title {
         font-size: 35px;
     }
-    .collection-content p{
+
+    .collection-content p {
         font-size: 18px;
         text-align: left;
     }
-    .about-main ul li{
+
+    .about-main ul li {
         font-size: 18px;
         margin-bottom: 10px;
         line-height: 30px;
     }
-    .subtitle{
+
+    .subtitle {
         font-size: 18px;
     }
-    .nft-list h5{
+
+    .nft-list h5 {
         font-size: 22px;
         margin-bottom: 8px;
     }
-    .nft-list p{
+
+    .nft-list p {
         font-size: 18px;
     }
-    .collection-footer h5{
+
+    .collection-footer h5 {
         font-size: 26px;
         padding-bottom: 10px;
     }
-    .collection-header .subtitle{
+
+    .collection-header .subtitle {
         width: 100%;
     }
-    .collection-content a.buynow{
+
+    .collection-content a.buynow {
         margin: 0 auto;
     }
-    .team_detail img.team_image{
+
+    .team_detail img.team_image {
         width: 100%;
         height: 100%;
     }
 }
 
-@media(max-width: 767px){
-    .title{
+@media(max-width: 767px) {
+    .title {
         font-size: 30px;
     }
-    .roadmap-content{
+
+    .roadmap-content {
         margin-bottom: 70px;
     }
-    .collection-content h5{
+
+    .collection-content h5 {
         font-size: 30px;
     }
-    .collection-content{
+
+    .collection-content {
         text-align: left;
     }
-    .roadmap-img img{
+
+    .roadmap-img img {
         margin-bottom: 20px;
     }
-    .nft-list h5{
+
+    .nft-list h5 {
         font-size: 16px;
     }
-    .nft-list p{
+
+    .nft-list p {
         font-size: 14px;
     }
-    .nft-list{
+
+    .nft-list {
         min-height: 465px;
     }
 }
 
-@media(max-width: 575px){
-    .title{
+@media(max-width: 575px) {
+    .title {
         font-size: 26px;
     }
-    .collection-footer h5{
+
+    .collection-footer h5 {
         font-size: 20px;
     }
-    .roadmap-subcontent{
+
+    .roadmap-subcontent {
         box-shadow: 0px 7px 0px 0px #442a14;
     }
 }
 
-@media(min-width: 1200px){
-    .footer-main p{
+@media(min-width: 1200px) {
+    .footer-main p {
         font-size: 18px;
         margin-bottom: 15px;
     }
-    .collection-img img{
+
+    .collection-img img {
         max-width: 100%;
     }
 }
 
-@media(min-width: 1400px){
-    .collection-img img{
+@media(min-width: 1400px) {
+    .collection-img img {
         max-width: 100%;
     }
-    .collection-content h5{
+
+    .collection-content h5 {
         font-size: 50px;
     }
-    .collection-content p{
+
+    .collection-content p {
         font-size: 18px;
     }
-    .about-main ul li{
+
+    .about-main ul li {
         font-size: 18px;
         margin-bottom: 15px;
         line-height: 30px;
     }
-    .title{
+
+    .title {
         font-size: 50px;
     }
-    .subtitle{
+
+    .subtitle {
         font-size: 18px;
     }
-    .nft-list h5{
+
+    .nft-list h5 {
         font-size: 24px;
     }
-    .nft-list p{
+
+    .nft-list p {
         font-size: 18px;
     }
-    .collection-content p{
+
+    .collection-content p {
         font-size: 20px;
         line-height: 30px;
     }
-    .footer-main p{
+
+    .footer-main p {
         font-size: 20px;
     }
-    .roadmap-subcontent h5{
+
+    .roadmap-subcontent h5 {
         margin-bottom: 10px;
     }
-    .roadmap-subcontent li{
+
+    .roadmap-subcontent li {
         font-size: 16px;
     }
 }
-
-
-
