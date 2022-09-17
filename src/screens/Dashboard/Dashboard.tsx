@@ -10,8 +10,8 @@ import TeamList from "./TeamList";
 import Participate from "./Participate";
 import { Link } from "react-router-dom";
 
-const Dashboard = () =>{
-    return(
+const Dashboard = () => {
+    return (
         <>
             <div className="subsection-main">
                 <Simulation />
