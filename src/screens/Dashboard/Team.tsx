@@ -1,8 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
 import about from "../../assets/image/about.png";
 
-const Team = () =>{
-    return(
+const Team = () => {
+    return (
         <>
             <div className="collection-main common">
                 <Container>
@@ -10,7 +10,7 @@ const Team = () =>{
                         <Row className="align-items-center" >
                             <Col lg={6} >
                                 <div className="collection-img">
-                                    <img src={about} alt="collection-img" />
+                                    <img src={about} alt="collection-img" className="team-img" />
                                 </div>
                             </Col>
                             <Col lg={6} >
