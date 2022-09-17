@@ -1,9 +1,9 @@
-import { Container , Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import dog from "../../assets/image/dog.svg";
 import dogleft from "../../assets/image/dog_left.svg";
 
-const Participate = () =>{
-    return(
+const Participate = () => {
+    return (
         <>
             <div className="participate-main common">
                 <Container>
@@ -30,10 +30,10 @@ const Participate = () =>{
                                     <li>Mint Date : <span>Oct 26th-Oct 31st</span></li>
                                     <li>Mint # : <span>Open Mint</span></li>
                                 </ul>
-                            </div>                
+                            </div>
                         </Col>
                     </Row>
-                    <Row className="align-items-center" >
+                    {/* <Row className="align-items-center" >
                         <Col xl={3} >
                             <div className="doge_logo">
                                 <img src={dog} alt="doge" />
@@ -102,9 +102,9 @@ const Participate = () =>{
                         <Col xl={3} >
                             <div className="doge_logo">
                                 <img src={dogleft} alt="doge" />
-                            </div>               
+                            </div>
                         </Col>
-                    </Row>
+                    </Row> */}
                 </Container>
             </div>
         </>
