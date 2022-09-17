@@ -1,30 +1,30 @@
-.mint-main{
+.mint-main {
     margin-bottom: 80px;
     margin-top: 80px;
 }
 
-.mintbox-image{
+.mintbox-image {
     display: flex;
     align-items: center;
     border-left: 1px dashed;
 }
 
-.mintbox-image img{
+.mintbox-image img {
     max-width: 300px;
     margin-right: 20px;
 }
 
-.mintbox-image h5{
+.mintbox-image h5 {
     font-size: 60px;
     font-weight: 900;
     color: #442A14;
 }
 
-.mintbox-main{
+.mintbox-main {
     position: relative;
 }
 
-.mintbox-main-content{
+.mintbox-main-content {
     background-color: #FAF0D1;
     padding: 30px;
     border: 2px solid #442A14;
@@ -36,54 +36,55 @@
     margin: 0 auto;
 }
 
-.mintbox-header{
+.mintbox-header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.mintbox-header h5{
+.mintbox-header h5 {
     font-weight: 800;
     font-size: 26px;
     letter-spacing: 0.4px;
     margin-bottom: 5px;
 }
 
-.mintbox-header p{
+.mintbox-header p {
     font-weight: 500;
     letter-spacing: 0.5px;
     margin-bottom: 0px;
 }
 
-.mintbox-content{
+.mintbox-content {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #442A14;
 }
 
-.mintbox-content p{
+.mintbox-content p {
     margin-bottom: 0px;
     font-weight: 700;
     letter-spacing: 0.4px;
     font-size: 16px;
 }
 
-.mintbox-content h5{
+.mintbox-content h5 {
     margin-bottom: 0px;
     font-weight: 700;
     font-size: 22px;
 }
 
-.mintbox-content .mintbox-subcontent{
+.mintbox-content .mintbox-subcontent {
     padding-bottom: 15px;
     padding-top: 15px;
 }
 
-.mintbox-content h5 span{
+.mintbox-content h5 span {
     margin: 0px 10px;
     cursor: pointer;
 }
 
-.mintbox-main-content a.buynow,.mintbox-main-content button.buynow{
+.mintbox-main-content a.buynow,
+.mintbox-main-content button.buynow {
     margin: 30px auto;
     font-weight: 900;
     color: #fff;
@@ -93,7 +94,7 @@
     cursor: pointer;
 }
 
-.max{
+.max {
     text-align: right;
     font-weight: 700;
     font-size: 12px;
@@ -103,31 +104,31 @@
     letter-spacing: 0.5px;
 }
 
-.mintbox-main-content h6{
+.mintbox-main-content h6 {
     margin-bottom: 0px;
     text-align: center;
     letter-spacing: 0.4px;
     font-weight: 700;
 }
 
-.minting_info{
+.minting_info {
     margin-top: 30px;
     margin-bottom: 50px;
 }
 
-.minting_info h6{
+.minting_info h6 {
     font-size: 22px;
     font-weight: 800;
     padding-bottom: 10px;
-    border-bottom: 1px dashed rgba(33,37,41,0.3);
+    border-bottom: 1px dashed rgba(33, 37, 41, 0.3);
     display: inline-block;
 }
 
-.minting_info ul{
+.minting_info ul {
     padding-left: 0px;
 }
 
-.minting_info li{
+.minting_info li {
     list-style: none;
     font-weight: 600;
     font-size: 16px;
@@ -137,7 +138,7 @@
     width: 33.33%;
 }
 
-/* .backgroundcolor-mint{
+/* .backgroundcolor-mint {
     width: 340px;
     height: 250px;
     background-color: #442A14;
@@ -153,147 +154,166 @@
 }
 
 /* Mint Tab CSS */
-.mint_option{
+.mint_option {
     padding: 5px;
     background-color: #fff;
     display: inline-block;
     border-radius: 5px;
 }
 
-.mint_option .nav-link{
+.mint_option .nav-link {
     cursor: pointer;
     color: #442A14;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
 
-.mint_option .nav-pills .nav-link.active, .mint_option .nav-pills .show>.nav-link{
+.mint_option .nav-pills .nav-link.active,
+.mint_option .nav-pills .show>.nav-link {
     background-color: #442A14;
 }
 
-.mint-main .tab-content{
+.mint-main .tab-content {
     padding-top: 20px;
     margin-top: 20px;
-    border-top: 1px dashed rgba(33,37,41,0.3);
+    border-top: 1px dashed rgba(33, 37, 41, 0.3);
 }
 
-.preregister_content{
+.preregister_content {
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px dashed rgba(33,37,41,0.3);
+    border-bottom: 1px dashed rgba(33, 37, 41, 0.3);
 }
 
-.preregister_content h6{
+.preregister_content h6 {
     font-weight: 800;
     letter-spacing: 0.5px;
     font-size: 22px;
 }
 
-.preregister_content p{
+.preregister_content p {
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 16px;
     margin-bottom: 0px;
 }
 
-.preregister_content a.buynow, button.buynow{
+.preregister_content a.buynow,
+button.buynow {
     margin: inherit;
     margin-top: 20px;
     margin-left: 15px;
     margin-bottom: 10px;
 }
 
-.preregister_content p span{
+.preregister_content p span {
     color: #ff0000;
 }
 
-@media(max-width: 1199px){
-    .mintbox-image img{
+@media(max-width: 1199px) {
+    .mintbox-image img {
         max-width: 250px;
     }
-    .mintbox-image h5{
+
+    .mintbox-image h5 {
         font-size: 40px;
     }
 }
 
-@media(max-width: 991px){
-    .mintbox-main-content{
+@media(max-width: 991px) {
+    .mintbox-main-content {
         margin: 10px auto 0 auto;
     }
-    .backgroundcolor-mint{
+
+    .backgroundcolor-mint {
         right: 210px;
     }
-    .mintbox-image{
+
+    .mintbox-image {
         margin-top: 100px;
         justify-content: center;
     }
-    .mintbox-image img{
+
+    .mintbox-image img {
         max-width: 300px;
     }
-    .mintbox-image h5{
+
+    .mintbox-image h5 {
         font-size: 60px;
     }
-    .mintbox-content{
+
+    .mintbox-content {
         display: inherit;
         justify-content: inherit;
     }
-    .minting_info{
+
+    .minting_info {
         margin-bottom: 0px;
     }
-    .minting_info li{
+
+    .minting_info li {
         width: 50%;
     }
-    .doge_logo{
+
+    .doge_logo {
         display: none;
     }
 }
 
-@media(max-width: 767px){
-    .backgroundcolor-mint{
+@media(max-width: 767px) {
+    .backgroundcolor-mint {
         right: 120px;
     }
-    .mintbox-image img{
+
+    .mintbox-image img {
         max-width: 250px;
     }
 }
 
-@media(max-width: 575px){
-    .backgroundcolor-mint{
+@media(max-width: 575px) {
+    .backgroundcolor-mint {
         right: 130px;
     }
-    .mintbox-image img{
+
+    .mintbox-image img {
         max-width: 200px;
     }
-    .mintbox-image h5{
+
+    .mintbox-image h5 {
         font-size: 40px;
     }
 }
 
-@media(max-width: 480px){
-    .backgroundcolor-mint{
+@media(max-width: 480px) {
+    .backgroundcolor-mint {
         right: 0;
     }
-    .mintbox-image{
+
+    .mintbox-image {
         display: block;
         text-align: center;
     }
-    .mintbox-image img{
+
+    .mintbox-image img {
         max-width: 100%;
         margin-right: 0px;
     }
-    .mintbox-image h5{
+
+    .mintbox-image h5 {
         margin-top: 10px;
     }
-    .mintbox-image h5 br{
+
+    .mintbox-image h5 br {
         display: none;
     }
-    .backgroundcolor-mint{
+
+    .backgroundcolor-mint {
         width: 300px;
     }
 }
 
-@media(max-width: 400px){
-    .mintbox-main-content{
+@media(max-width: 400px) {
+    .mintbox-main-content {
         width: auto;
     }
 }
