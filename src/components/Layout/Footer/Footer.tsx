@@ -3,8 +3,8 @@ import twitter from "../../../assets/image/twitter.svg";
 import discord from "../../../assets/image/discord.svg";
 import whitepaper from "../../../assets/image/paper.svg";
 
-const Footer = () =>{
-    return(
+const Footer = () => {
+    return (
         <>
             <div className="footer-main">
                 <p>&copy; copyrights 2022 Doge Academy | All Rights Reserved.</p>
