@@ -7,7 +7,7 @@ import team5 from "../../assets/image/team5.png";
 import team6 from "../../assets/image/team6.png";
 import twitter from "../../assets/image/twitter.svg";
 
-const TeamList = () =>{
+const TeamList = () => {
 
     const data = [
         {
@@ -54,7 +54,7 @@ const TeamList = () =>{
         },
     ]
 
-    return(
+    return (
         <>
             <div className="teamlist_main common">
                 <Container>
@@ -62,8 +62,8 @@ const TeamList = () =>{
                         <h5 className="title brown" >Meet The Team</h5>
                     </div>
                     <Row>
-                        {data.map((d) =>(
-                            <Col lg={2} md={3} sm={4} xs={6} >
+                        {data.map((d) => (
+                            <Col lg={4} md={3} sm={4} xs={6} >
                                 <div className="team_detail">
                                     <div className="team_detail_image">
                                         <img src={d.teamimg} alt="team1" className="team_image" />
