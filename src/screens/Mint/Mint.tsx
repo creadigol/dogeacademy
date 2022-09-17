@@ -15,23 +15,23 @@ import Simulation from "../../components/Simulation/Simulation";
 
 declare let window: any;
 
-const Mint = () =>{
+const Mint = () => {
 
     const dispatch = useDispatch();
-    const blockchain = useSelector((state:ReducerStateIF) => state.blockchain);
+    const blockchain = useSelector((state: ReducerStateIF) => state.blockchain);
     const [loding, setLoding] = useState(true);
     const [price, setPrice] = useState(0);
     const [maxDogwhitelist, setMaxDogWhitelist] = useState(0);
     const [whitelistPrice, setWhitelistPrice] = useState(0);
     const [totalNft, setTotalNft] = useState({
-        total:0,
-        minted:0 
+        total: 0,
+        minted: 0
     });
 
     useEffect(() => {
-        async function getNftPrice(){
+        async function getNftPrice() {
             const getPrice = await blockchain.TestContract.methods.cost().call();
-            setPrice(getPrice/10**18);
+            setPrice(getPrice / 10 ** 18);
 
             const getWhitelistprice = await blockchain.TestContract.methods.whitelistCost().call();
             setWhitelistPrice(Number(getWhitelistprice));
@@ -43,108 +43,108 @@ const Mint = () =>{
 
         }
 
-        if(!isMobile){
-            if(blockchain.TestContract === null){
+        if (!isMobile) {
+            if (blockchain.TestContract === null) {
                 dispatch(intContract());
-            }else{
+            } else {
                 getTotalMintedNft();
                 getNftPrice();
             }
-        }else{
+        } else {
             if (window.ethereum) {
-                if(blockchain.TestContract === null){
+                if (blockchain.TestContract === null) {
                     dispatch(intContract());
-                }else{
+                } else {
                     getTotalMintedNft();
                     getNftPrice();
-                }   
+                }
             }
         }
 
-    },[blockchain]);
+    }, [blockchain]);
 
     const [number, setNumber] = useState(1);
-    const increamentNum = () =>{
+    const increamentNum = () => {
         setNumber(number + 1);
     }
-    const decreamentNum = () =>{
-        if(number > 1){
+    const decreamentNum = () => {
+        if (number > 1) {
             setNumber(number - 1);
         }
     }
 
-    const getTotalMintedNft = async() =>{
-        const maxSupplay = await blockchain.TestContract.methods.maxSupply().call();    
-        const totalMintToken = await blockchain.TestContract.methods.totalSupply().call();    
+    const getTotalMintedNft = async () => {
+        const maxSupplay = await blockchain.TestContract.methods.maxSupply().call();
+        const totalMintToken = await blockchain.TestContract.methods.totalSupply().call();
 
         setTotalNft({
-            total:Number(maxSupplay),
+            total: Number(maxSupplay),
             minted: Number(totalMintToken)
         })
     }
 
-    const mintNft = async(e:any) => {
+    const mintNft = async (e: any) => {
         e.preventDefault();
         setLoding(true);
 
         const mintedDogList = await blockchain.TestContract.methods.DogWhitelsitSupply().call();
-        
+
         let isInDoglist = false;
-        if(Number(mintedDogList) < maxDogwhitelist){
+        if (Number(mintedDogList) < maxDogwhitelist) {
             isInDoglist = true;
         }
         const isStartDoglistSale = await blockchain.TestContract.methods.saleEndtime().call();
-        const isWhitelist = await Services.post("isWhitelist", {address:blockchain.account, isInDoglist:isInDoglist, doglistSaleStatus:Number(isStartDoglistSale)});
-        if(isWhitelist.data.status){
+        const isWhitelist = await Services.post("isWhitelist", { address: blockchain.account, isInDoglist: isInDoglist, doglistSaleStatus: Number(isStartDoglistSale) });
+        if (isWhitelist.data.status) {
 
-            const whitelistLeave = isWhitelist.data.data.map((data:any) => keccak256(String(data.wallet)));
+            const whitelistLeave = isWhitelist.data.data.map((data: any) => keccak256(String(data.wallet)));
             const tree = new MerkleTree(whitelistLeave, keccak256, { sort: true })
             const merkleProof = tree.getHexProof(keccak256(String(blockchain.account)))
-            let mintprice = blockchain.web3.utils.toWei((Number(price)*number).toString());
+            let mintprice = blockchain.web3.utils.toWei((Number(price) * number).toString());
 
-            if(isWhitelist.data.type == 'dogs'){
+            if (isWhitelist.data.type == 'dogs') {
                 mintprice = blockchain.web3.utils.toWei("0");
-            }else if(isWhitelist.data.type == 'alpha'){
-                mintprice = blockchain.web3.utils.toWei((Number(whitelistPrice)*number).toString());
+            } else if (isWhitelist.data.type == 'alpha') {
+                mintprice = blockchain.web3.utils.toWei((Number(whitelistPrice) * number).toString());
             }
 
-            blockchain.TestContract.methods.mint(number, merkleProof).send({ from: blockchain.account, value:Number(mintprice) }).on('transactionHash', function(hash:any){
-                waitForReceipt(hash, async function(response:any) {
-                    if(response.status){
-                        
+            blockchain.TestContract.methods.mint(number, merkleProof).send({ from: blockchain.account, value: Number(mintprice) }).on('transactionHash', function (hash: any) {
+                waitForReceipt(hash, async function (response: any) {
+                    if (response.status) {
+
                         setNumber(1);
                         alert("Nft Mint successfully");
                         setLoding(false);
-                        
-                    }else{
+
+                    } else {
                         alert(response.msg);
                         setLoding(false);
-                    } 
-                    
+                    }
+
                 });
-            }).on('error', function(error:any, receipt:any) {
+            }).on('error', function (error: any, receipt: any) {
                 alert(error.message);
                 setLoding(false);
             });
 
-        }else{
+        } else {
             alert(isWhitelist.data.msg);
             setLoding(false);
         }
     }
 
-    const waitForReceipt = async (hash:any, cb:any) => {
-            blockchain.web3.eth.getTransactionReceipt(hash, function (err:any, receipt :any) {
+    const waitForReceipt = async (hash: any, cb: any) => {
+        blockchain.web3.eth.getTransactionReceipt(hash, function (err: any, receipt: any) {
             if (err) {
                 console.log(err);
-            }  
-        
+            }
+
             if (receipt !== null) {
                 if (cb) {
-                    if(receipt.status == '0x0') {
-                        cb({status:false, msg: "The contract execution was not successful, check your transaction !"});
+                    if (receipt.status == '0x0') {
+                        cb({ status: false, msg: "The contract execution was not successful, check your transaction !" });
                     } else {
-                        cb({status:true, msg:"Execution worked fine!"});
+                        cb({ status: true, msg: "Execution worked fine!" });
                     }
                 }
             } else {
@@ -152,10 +152,10 @@ const Mint = () =>{
                     waitForReceipt(hash, cb);
                 }, 1000);
             }
-            });
-    } 
+        });
+    }
 
-    return(
+    return (
         <>
             <div className="subsection-main">
                 <Simulation />
@@ -178,7 +178,7 @@ const Mint = () =>{
                                         </Nav>
                                     </div>
                                 </Col>
-                                <Col xl={{ order: 1 , span: 12 }} lg={{ order: 2 , span: 6 }} md={{ order: 1 , span: 12 }} sm={{ order: 1 , span: 12 }} xs={{ order: 1 , span: 12 }} >
+                                <Col xl={{ order: 1, span: 12 }} lg={{ order: 2, span: 6 }} md={{ order: 1, span: 12 }} sm={{ order: 1, span: 12 }} xs={{ order: 1, span: 12 }} >
                                     <Tab.Content>
                                         <Tab.Pane eventKey="first">
                                             <div className="preregister_content">
@@ -205,7 +205,7 @@ const Mint = () =>{
                                                             <li>Mint Date : <span>Oct 26th-Oct 31st</span></li>
                                                             <li>Mint # : <span>Open Mint</span></li>
                                                         </ul>
-                                                    </div>                
+                                                    </div>
                                                 </Col>
                                             </Row>
                                             <Row className="align-items-center" >
@@ -259,7 +259,7 @@ const Mint = () =>{
                                                                                         <p>Total</p>
                                                                                     </Col>
                                                                                     <Col xs={8} >
-                                                                                        <h5 className="text-center" >{price*number}</h5>
+                                                                                        <h5 className="text-center" >{price * number}</h5>
                                                                                     </Col>
                                                                                 </Row>
                                                                             </div>
@@ -268,19 +268,19 @@ const Mint = () =>{
                                                                 </div>
                                                                 <>
                                                                     {
-                                                                        (blockchain.account == null)?(
+                                                                        (blockchain.account == null) ? (
                                                                             <button onClick={(e) => {
                                                                                 e.preventDefault();
                                                                                 dispatch(connect());
-                                                                            }}  className="buynow"> CONNECT</button>
-                                                                        ):(
+                                                                            }} className="buynow"> CONNECT</button>
+                                                                        ) : (
                                                                             <>
-                                                                                { !loding?(                                            
+                                                                                {!loding ? (
                                                                                     <>
                                                                                         <button type="submit" className="buynow">CLAIM NFT</button>
-                                                                                        <h6>Wallet Id : {blockchain.account.substring(0, 5)+'...'+blockchain.account.slice(-5)}</h6>
+                                                                                        <h6>Wallet Id : {blockchain.account.substring(0, 5) + '...' + blockchain.account.slice(-5)}</h6>
                                                                                     </>
-                                                                                ):(
+                                                                                ) : (
                                                                                     <button type="button" className="buynow" disabled>Wait...</button>
                                                                                 )}
                                                                             </>
@@ -295,10 +295,10 @@ const Mint = () =>{
                                                 <Col xl={3} >
                                                     <div className="doge_logo">
                                                         <img src={dogleft} alt="doge" />
-                                                    </div>               
+                                                    </div>
                                                 </Col>
                                             </Row>
-                                            
+
                                         </Tab.Pane>
                                     </Tab.Content>
                                 </Col>

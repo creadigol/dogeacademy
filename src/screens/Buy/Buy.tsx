@@ -5,7 +5,7 @@ import "./Buy.css";
 import product from "../../assets/image/product_image.png";
 import visa from "../../assets/image/visa.svg";
 
-const Buy = () =>{
+const Buy = () => {
     const settings = {
         dots: true,
         infinite: true,
@@ -13,7 +13,7 @@ const Buy = () =>{
         slidesToShow: 1,
         slidesToScroll: 1
     };
-    return(
+    return (
         <>
             <div className="subsection-main product_detail_main">
                 <Container>

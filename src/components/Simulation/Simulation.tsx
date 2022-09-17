@@ -4,7 +4,7 @@ import slider5 from "../../assets/image/slider5.jpg";
 import { Container } from "react-bootstrap";
 import "./Simulation.css";
 
-const Simulation = () =>{
+const Simulation = () => {
     const settings = {
         dots: false,
         infinite: true,
@@ -15,7 +15,7 @@ const Simulation = () =>{
         speed: 2000,
         autoplaySpeed: 2000,
     };
-    return(
+    return (
         <>
             <div className="simulator-main" >
                 <Slider {...settings}>
