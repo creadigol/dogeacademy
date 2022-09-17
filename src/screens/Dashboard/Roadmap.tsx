@@ -4,8 +4,8 @@ import roadmap2 from "../../assets/image/roadmap2.svg";
 import roadmap3 from "../../assets/image/roadmap3.svg";
 import roadmap4 from "../../assets/image/roadmap4.svg";
 
-const Roadmap = () =>{
-    return(
+const Roadmap = () => {
+    return (
         <>
             <div className="roadmap-main common">
                 <Container>
@@ -17,22 +17,22 @@ const Roadmap = () =>{
                         <Col xl={3} lg={12} >
                             <div className="roadmap-content">
                                 <Row className="align-items-center" >
-                                    <Col xl={{ order: 'first' , span: 12 }} lg={{ order: 'first' , span: 8 }} md={{ order: 'first' , span: 8 }} sm={{ order: 'last' , span: 12 }} xs={{ order: 'last' , span: 12 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} lg={{ order: 'first', span: 8 }} md={{ order: 'first', span: 8 }} sm={{ order: 'last', span: 12 }} xs={{ order: 'last', span: 12 }} >
                                         <div className="roadmap-subcontent roadmap-subcontent-top">
                                             <h5>Phase 1</h5>
                                             <ul>
                                                 <li>Community Building</li>
-                                                <li>Open Weekly Events and Lectures by 
+                                                <li>Open Weekly Events and Lectures by
                                                     experts and community members. Please reach out if you have suggestions and ideas!</li>
                                             </ul>
                                         </div>
                                     </Col>
-                                    <Col xl={{ order: 'first' , span: 12 }} lg={{ order: 'first' , span: 4 }} md={{ order: 'first' , span: 4 }} sm={{ order: 'first' , span: 12 }} xs={{ order: 'first' , span: 12 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} lg={{ order: 'first', span: 4 }} md={{ order: 'first', span: 4 }} sm={{ order: 'first', span: 12 }} xs={{ order: 'first', span: 12 }} >
                                         <div className="roadmap-img" >
                                             <img src={roadmap1} alt="roadmap" />
                                         </div>
                                     </Col>
-                                    <Col xl={{ order: 'first' , span: 12 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} >
                                         <div className="roadmap-subcontent roadmap-subcontent-blank"></div>
                                     </Col>
                                 </Row>
@@ -41,15 +41,15 @@ const Roadmap = () =>{
                         <Col xl={3} lg={12} >
                             <div className="roadmap-content roadmap-content-odd">
                                 <Row className="align-items-center" >
-                                    <Col xl={{ order: 'first' , span: 12 }}  >
+                                    <Col xl={{ order: 'first', span: 12 }}  >
                                         <div className="roadmap-subcontent roadmap-subcontent-blank"></div>
                                     </Col>
-                                    <Col xl={{ order: 'first' , span: 12 }} lg={{ order: 'first' , span: 4 }} md={{ order: 'first' , span: 4 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} lg={{ order: 'first', span: 4 }} md={{ order: 'first', span: 4 }} >
                                         <div className="roadmap-img" >
                                             <img src={roadmap2} alt="roadmap" />
                                         </div>
                                     </Col>
-                                    <Col xl={{ order: 'first' , span: 12 }} lg={{ order: 'first' , span: 8 }} md={{ order: 'first' , span: 8 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} lg={{ order: 'first', span: 8 }} md={{ order: 'first', span: 8 }} >
                                         <div className="roadmap-subcontent roadmap-subcontent-bottom">
                                             <h5>Phase 2</h5>
                                             <ul>
@@ -63,7 +63,7 @@ const Roadmap = () =>{
                         <Col xl={3} lg={12} >
                             <div className="roadmap-content">
                                 <Row className="align-items-center" >
-                                    <Col xl={{ order: 'first' , span: 12 }} lg={{ order: 'first' , span: 8 }} md={{ order: 'first' , span: 8 }} sm={{ order: 'last' , span: 12 }} xs={{ order: 'last' , span: 12 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} lg={{ order: 'first', span: 8 }} md={{ order: 'first', span: 8 }} sm={{ order: 'last', span: 12 }} xs={{ order: 'last', span: 12 }} >
                                         <div className="roadmap-subcontent roadmap-subcontent-top">
                                             <h5>Phase 3</h5>
                                             <ul>
@@ -71,12 +71,12 @@ const Roadmap = () =>{
                                             </ul>
                                         </div>
                                     </Col>
-                                    <Col xl={{ order: 'first' , span: 12 }} lg={{ order: 'first' , span: 4 }} md={{ order: 'first' , span: 4 }} sm={{ order: 'first' , span: 12 }} xs={{ order: 'first' , span: 12 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} lg={{ order: 'first', span: 4 }} md={{ order: 'first', span: 4 }} sm={{ order: 'first', span: 12 }} xs={{ order: 'first', span: 12 }} >
                                         <div className="roadmap-img" >
                                             <img src={roadmap3} alt="roadmap" />
                                         </div>
                                     </Col>
-                                    <Col xl={{ order: 'first' , span: 12 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} >
                                         <div className="roadmap-subcontent roadmap-subcontent-blank"></div>
                                     </Col>
                                 </Row>
@@ -85,15 +85,15 @@ const Roadmap = () =>{
                         <Col xl={3} lg={12} >
                             <div className="roadmap-content roadmap-content-odd">
                                 <Row className="align-items-center" >
-                                    <Col xl={{ order: 'first' , span: 12 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} >
                                         <div className="roadmap-subcontent roadmap-subcontent-blank"></div>
                                     </Col>
-                                    <Col xl={{ order: 'first' , span: 12 }} lg={{ order: 'first' , span: 4 }} md={{ order: 'first' , span: 4 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} lg={{ order: 'first', span: 4 }} md={{ order: 'first', span: 4 }} >
                                         <div className="roadmap-img last-roadmap-img" >
                                             <img src={roadmap4} alt="roadmap" />
                                         </div>
                                     </Col>
-                                    <Col xl={{ order: 'first' , span: 12 }} lg={{ order: 'first' , span: 8 }} md={{ order: 'first' , span: 8 }} >
+                                    <Col xl={{ order: 'first', span: 12 }} lg={{ order: 'first', span: 8 }} md={{ order: 'first', span: 8 }} >
                                         <div className="roadmap-subcontent roadmap-subcontent-bottom">
                                             <h5>Phase 4</h5>
                                             <ul>
